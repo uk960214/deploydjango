@@ -1,0 +1,23 @@
+.login-card {
+  background-color: var(--mus-white);
+}
+
+.login-card legend {
+  font-family: Pretendard-Light;
+}
+
+.br-brown {
+  border-color: var(--mus-brown);
+}
+
+.br-light-gray {
+  border-color: var(--mus-lightgray);
+}
+
+.errorlist li {
+  color: red;
+  font-size: 0.8rem;
+  max-width: 35ch;
+  margin: 0.5rem auto;
+  text-align: center;
+}

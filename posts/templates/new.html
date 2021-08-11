@@ -1,0 +1,95 @@
+{% extends './base.html' %} {% load static %} {% block add_css %}
+<link rel="stylesheet" href="{% static 'css/new.css' %}" />
+{% endblock add_css %} {% block content %}
+
+<section class="new-header tl mt5 mb4 center">
+  <h2>나의 이야기 작성하기</h2>
+  <hr class="tc mt4 mb3 br1" />
+</section>
+
+<section class="new-content-area w-80 center tl">
+  <form method="POST" action="{% url 'new' %}" class="post-form center">
+    {% csrf_token %}
+    <section class="form-top flex justify-between w-80 h4 items-center center">
+      <input type="text" name="title" class="form-title h2 pa2 w-30" placeholder="제목" value="{{form2.title.value}}"/>
+
+      {% if track_title %}
+      <div class="music_choice w-30 mb2 flex justify-center items-center">
+        <img src="{{track_album_cover}}" alt="" class="cover br-100 w-30 h-100 mw4">
+        <div class="info ml2">
+          <h4>선곡한 음악</h4>
+          <h4 class="title mb2">{{track_title}}</h4>
+          <h5 class="artist mb2">{{track_artist}}</h5>
+          <div class="custom-player br2">
+            <div class="controls flex mt2 justify-center pa1 items-center">
+              <i class="fas fa-play action-btn pointer f6 mr2"></i>
+              <p>
+                <span class="now-playing">0:00</span> /
+                <span class="duration">0:30</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <audio class="media-player preview flex" src="{{track_audio}}">
+      </div>
+      {% else %}
+      <div class="music_choice w-30 dn mb2 justify-center items-center">
+        <img src="" alt="" class="cover br-100 w-30 h-100 mw4">
+        <div class="info ml2 w-60">
+          <h4>선곡한 음악</h4>
+          <h4 class="title mv2"></h4>
+          <h5 class="artist mb2"></h5>
+          <div class="custom-player br2">
+            <div class="controls flex mt2 justify-center pa1 items-center">
+              <i class="fas fa-play action-btn pointer f6 mr2"></i>
+              <p>
+                <span class="now-playing">0:00</span> /
+                <span class="duration">0:30</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <audio class="media-player preview dn" src="">
+      </div>
+      {% endif %}
+
+      <section class="music-container w-30">
+        <input
+          type="text"
+          name="search_query"
+          id="search_query"
+          placeholder="음악 검색.."
+          autocomplete="off"
+          class="w-100 h2 pa2"
+        />
+        <div class="result_box w-100"></div>
+      </section>
+    </section>
+    <textarea name="body" class="form-body mt2 mb3 w-80 pa3 lh-title ml-auto br1" placeholder="오늘의 이야기를 들려주세요" autocomplete="off">{{form2.body.value}}</textarea>
+    {% if track_title %}
+      <input type="hidden" name="track_album_cover" value="{{track_album_cover}}">
+      <input type="hidden" name="track_title" value="{{track_title}}">
+      <input type="hidden" name="track_artist" value="{{track_artist}}">
+      <input type="hidden" name="track_audio" value="{{track_audio}}">
+    {% else %}
+      <input type="hidden" name="track_album_cover" value="">
+      <input type="hidden" name="track_title" value="">
+      <input type="hidden" name="track_artist" value="">
+      <input type="hidden" name="track_audio" value="">
+    {% endif %}
+  {% if messages %}
+    <ul class="errorlist">
+      {% for message in messages %}
+      <li class="red f5">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="btn-area w-80">
+    <button class="save-btn mv3 dib b ph4 pv2 
+  input-reset bn br2 grow pointer f4 hover-white fr" type="submit">저장하기</button>
+  </div>
+</form>
+<script src="{% static 'js/spotify.js' %}"></script>
+<script src="{% static 'js/player.js' %}"></script>
+{% endblock content %}

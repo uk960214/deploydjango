@@ -1,0 +1,180 @@
+/* base settings */
+@font-face {
+  font-family: "Pretendard-Thin";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+    format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  --mus-black: #212120;
+  --mus-darkgray: #595756;
+  --mus-little-darkgray: #787774;
+  --mus-neutralgray: #9e9c9a;
+  --mus-lightgray: #d1cfcb;
+  --mus-white: #fffcf8;
+  --mus-pink: #ebb29b;
+  --mus-brown: #998f76;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--mus-black);
+  font-family: Pretendard-Regular, Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: #dba691;
+}
+
+input:focus {
+  outline: none;
+}
+
+.dark-gray {
+  color: var(--mus-darkgray);
+}
+
+.shady {
+  color: #665e49;
+}
+
+.btn-beige {
+  background-color: #ccc0a3;
+  color: var(--mus-white);
+}
+
+.btn-beige:hover {
+  background-color: var(--mus-brown);
+}
+
+.btn-beige:visited {
+  color: var(--mus-white);
+}
+
+.pretendard {
+  font-family: Pretendard-Regular, Arial, Helvetica, sans-serif;
+}
+
+nav {
+  background-color: var(--mus-white);
+}
+
+nav > .logo {
+  width: 6.3rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.search-input {
+  width: 13rem;
+  background-color: var(--mus-white);
+}
+
+.fa-search {
+  color: var(--mus-white);
+}
+
+.brown {
+  color: var(--mus-brown);
+}
+
+.create-btn {
+  background-color: #ebb29b;
+  font-weight: 600;
+  color: var(--mus-white);
+}
+
+.create-btn:visited {
+  color: var(--mus-white);
+}
+
+.lh-large {
+  line-height: 1.8;
+}
+
+/* custom player */
+.custom-player {
+  color: var(--mus-white);
+  width: 100%;
+}
+
+.custom-player * {
+  color: var(--mus-white);
+}
+
+.stream-base {
+  background-color: var(--mus-lightgray);
+  width: 100%;
+}
+
+.stream-now {
+  background-color: var(--mus-white);
+  width: calc(20 / 3 * 1%);
+}

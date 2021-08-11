@@ -1,0 +1,56 @@
+:root {
+  --mus-black: #212120;
+  --mus-darkgray: #595756;
+  --mus-little-darkgray: #787774;
+  --mus-neutralgray: #9e9c9a;
+  --mus-white: #fffcf8;
+  --mus-pink: #ebb29b;
+  --mus-brown: #998f76;
+}
+
+.detail-header {
+  margin-top: 5%;
+}
+
+.go-list {
+  font-size: 1.3em;
+  margin: 15%;
+  color: var(--mus-darkgray);
+}
+
+.music-info {
+  font-family: Pretendard-Medium;
+  color: var(--mus-darkgray);
+}
+
+.player {
+  text-align: center;
+  margin: 12px;
+}
+
+hr {
+  border: 2px solid #dedbd8;
+  width: 16%;
+}
+
+.music-info {
+  width: 30vw;
+}
+
+.music-info .custom-player {
+  width: 20vw;
+}
+
+.music-info .custom-player * {
+  color: var(--mus-darkgray);
+}
+
+.music-info .stream-base {
+  background-color: var(--mus-lightgray);
+  width: 100%;
+}
+
+.stream-now {
+  background-color: var(--mus-pink);
+  width: calc(20 / 3 * 1%);
+}

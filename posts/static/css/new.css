@@ -1,0 +1,102 @@
+/* new */
+
+.new-header {
+  width: 64%;
+}
+
+.new-header hr {
+  border: 2px solid #dedbd8;
+  width: 18%;
+}
+
+.result_box {
+  position: absolute;
+  overflow: scroll;
+  max-height: 30vh;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  background-color: var(--mus-white);
+  box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result_box::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.result_entry {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  padding: 0.5rem;
+  border-bottom: 1px solid #d1cfcb;
+}
+
+.result_entry::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+}
+
+.result_entry:hover {
+  background-color: var(--mus-pink);
+}
+
+.cover-img-container {
+  width: 30%;
+}
+
+.result_entry img {
+  border-radius: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.result_entry .info .title,
+.artists {
+  text-align: left;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  max-width: 20ch;
+}
+
+.custom-player {
+  background-color: var(--mus-brown);
+}
+
+.music_choice img {
+  object-fit: scale-down;
+}
+
+.form-body {
+  height: 40vh;
+  border: 1px solid var(--mus-neutralgray);
+  resize: none;
+}
+
+.form-body:focus {
+  outline: none;
+}
+
+.form-body,
+.btn-area,
+.errorlist {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.save-btn {
+  color: var(--mus-white);
+  background-color: var(--mus-pink);
+}
+
+.music-container {
+  position: relative;
+}
+
+.result_box {
+  position: absolute;
+}
